@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XJa-Ht-4nt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,221 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="psychological_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="截圖 2020-03-29 下午2.30.35" translatesAutoresizingMaskIntoConstraints="NO" id="KiH-Os-0ii">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你會如何享受生活" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gT-bm-4cu">
+                                <rect key="frame" x="50" y="248" width="314" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2X-WJ-Zc8">
+                                <rect key="frame" x="50" y="657" width="314" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="測驗"/>
+                                <connections>
+                                    <segue destination="vyO-Gy-5aP" kind="show" id="GfO-F7-rGK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7gT-bm-4cu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="65v-O3-QQa"/>
+                            <constraint firstItem="7gT-bm-4cu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="7ww-hw-Ql1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G2X-WJ-Zc8" secondAttribute="trailing" constant="50" id="D7I-Sa-DW8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7gT-bm-4cu" secondAttribute="trailing" constant="50" id="ErZ-UC-38q"/>
+                            <constraint firstItem="KiH-Os-0ii" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Sjb-Wg-Od2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KiH-Os-0ii" secondAttribute="trailing" id="UGu-Te-LyC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G2X-WJ-Zc8" secondAttribute="bottom" constant="157" id="cve-fg-PbP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KiH-Os-0ii" secondAttribute="bottom" id="hCW-ee-oRj"/>
+                            <constraint firstItem="KiH-Os-0ii" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v7v-Cr-tgj"/>
+                            <constraint firstItem="G2X-WJ-Zc8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="vCG-Ae-ToC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="UNh-BP-aqm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57" y="155"/>
+        </scene>
+        <!--Select View Controller-->
+        <scene sceneID="FMc-nL-F20">
+            <objects>
+                <viewController id="vyO-Gy-5aP" customClass="selectViewController" customModule="psychological_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4X0-jz-EWm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="截圖 2020-03-29 下午2.30.35" translatesAutoresizingMaskIntoConstraints="NO" id="Lyh-qd-S7K">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以下四種動物具有不同的獨特力能力，如果你能擁有一項，你會選擇哪一個" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yp-W6-ByA">
+                                <rect key="frame" x="40" y="188" width="334" height="107.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="PeK-cV-zE3">
+                                <rect key="frame" x="40" y="365.5" width="334" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvW-UT-ftM">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="HkG-za-4Lf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="老鷹的展翅高飛"/>
+                                        <connections>
+                                            <action selector="choice:" destination="vyO-Gy-5aP" eventType="touchUpInside" id="T8A-Ds-SxO"/>
+                                            <segue destination="ejv-Mr-UrT" kind="show" destinationCreationSelector="tt:" id="rdd-Ka-uPY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlq-Ua-Jsb">
+                                        <rect key="frame" x="0.0" y="80" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Cgj-Yt-5bn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="戰象的壓倒力量"/>
+                                        <connections>
+                                            <segue destination="ejv-Mr-UrT" kind="show" destinationCreationSelector="ttt:" id="0P9-mo-fel"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtH-WS-mqC">
+                                        <rect key="frame" x="0.0" y="160" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8BM-iw-qdf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="海豚的悠遊自在"/>
+                                        <connections>
+                                            <segue destination="ejv-Mr-UrT" kind="show" destinationCreationSelector="tttt:" id="n2S-ys-aeL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqa-ae-8a5">
+                                        <rect key="frame" x="0.0" y="240" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="vEN-H9-X3s"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="獵豹的敏捷速度"/>
+                                        <connections>
+                                            <segue destination="ejv-Mr-UrT" kind="show" destinationCreationSelector="ttttt:" id="rMw-th-7UZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Tqa-ae-8a5" firstAttribute="height" secondItem="vvW-UT-ftM" secondAttribute="height" id="3zN-SX-SJW"/>
+                                    <constraint firstItem="rlq-Ua-Jsb" firstAttribute="height" secondItem="vvW-UT-ftM" secondAttribute="height" id="mzi-0Q-eif"/>
+                                    <constraint firstItem="HtH-WS-mqC" firstAttribute="height" secondItem="vvW-UT-ftM" secondAttribute="height" id="s37-Yq-aGj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PeK-cV-zE3" firstAttribute="top" secondItem="5Yp-W6-ByA" secondAttribute="bottom" constant="70" id="3Cw-lq-k4B"/>
+                            <constraint firstItem="Lyh-qd-S7K" firstAttribute="top" secondItem="FaM-bC-0RI" secondAttribute="top" id="MdR-R2-hJt"/>
+                            <constraint firstItem="FaM-bC-0RI" firstAttribute="bottom" secondItem="Lyh-qd-S7K" secondAttribute="bottom" id="V71-Vc-elO"/>
+                            <constraint firstItem="PeK-cV-zE3" firstAttribute="leading" secondItem="FaM-bC-0RI" secondAttribute="leading" constant="40" id="V9F-vh-T6Z"/>
+                            <constraint firstItem="FaM-bC-0RI" firstAttribute="trailing" secondItem="Lyh-qd-S7K" secondAttribute="trailing" id="huR-Vw-bWh"/>
+                            <constraint firstItem="5Yp-W6-ByA" firstAttribute="leading" secondItem="FaM-bC-0RI" secondAttribute="leading" constant="40" id="mYO-HO-1F7"/>
+                            <constraint firstItem="FaM-bC-0RI" firstAttribute="trailing" secondItem="PeK-cV-zE3" secondAttribute="trailing" constant="40" id="nDz-92-RpC"/>
+                            <constraint firstItem="FaM-bC-0RI" firstAttribute="trailing" secondItem="5Yp-W6-ByA" secondAttribute="trailing" constant="40" id="nqA-Mk-2EK"/>
+                            <constraint firstItem="5Yp-W6-ByA" firstAttribute="top" secondItem="FaM-bC-0RI" secondAttribute="top" constant="100" id="oV0-tf-M9h"/>
+                            <constraint firstItem="Lyh-qd-S7K" firstAttribute="leading" secondItem="FaM-bC-0RI" secondAttribute="leading" id="r9I-S5-Cbd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FaM-bC-0RI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vPc-iY-rbJ"/>
+                    <connections>
+                        <outletCollection property="choice_1" destination="vvW-UT-ftM" collectionClass="NSMutableArray" id="cWH-5C-qZU"/>
+                        <outletCollection property="choice_1" destination="rlq-Ua-Jsb" collectionClass="NSMutableArray" id="rr9-rW-h4S"/>
+                        <outletCollection property="choice_1" destination="HtH-WS-mqC" collectionClass="NSMutableArray" id="80A-r0-SVw"/>
+                        <outletCollection property="choice_1" destination="Tqa-ae-8a5" collectionClass="NSMutableArray" id="JMU-lS-rt4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47m-AV-hdf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="683" y="165"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="0ec-WW-ArP">
+            <objects>
+                <viewController id="ejv-Mr-UrT" customClass="resultViewController" customModule="psychological_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fen-uU-V6F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="截圖 2020-03-29 下午2.30.35" translatesAutoresizingMaskIntoConstraints="NO" id="3Hl-ZQ-iw0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="測驗結果說明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPi-T2-3aZ">
+                                <rect key="frame" x="40" y="238" width="334" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feB-W1-Iir">
+                                <rect key="frame" x="40" y="636.5" width="334" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IRz-kW-6yy" firstAttribute="trailing" secondItem="feB-W1-Iir" secondAttribute="trailing" constant="40" id="57d-8z-cj9"/>
+                            <constraint firstItem="IRz-kW-6yy" firstAttribute="bottom" secondItem="3Hl-ZQ-iw0" secondAttribute="bottom" id="82e-eT-oJN"/>
+                            <constraint firstItem="DPi-T2-3aZ" firstAttribute="top" secondItem="IRz-kW-6yy" secondAttribute="top" constant="150" id="8ew-sR-kO0"/>
+                            <constraint firstItem="IRz-kW-6yy" firstAttribute="trailing" secondItem="DPi-T2-3aZ" secondAttribute="trailing" constant="40" id="HfD-jV-Msw"/>
+                            <constraint firstItem="IRz-kW-6yy" firstAttribute="bottom" secondItem="feB-W1-Iir" secondAttribute="bottom" constant="200" id="TUY-w1-QFp"/>
+                            <constraint firstItem="3Hl-ZQ-iw0" firstAttribute="leading" secondItem="IRz-kW-6yy" secondAttribute="leading" id="UIQ-ca-WSz"/>
+                            <constraint firstItem="feB-W1-Iir" firstAttribute="leading" secondItem="IRz-kW-6yy" secondAttribute="leading" constant="40" id="adt-N9-9BE"/>
+                            <constraint firstItem="3Hl-ZQ-iw0" firstAttribute="top" secondItem="IRz-kW-6yy" secondAttribute="top" id="sUS-d8-ZVo"/>
+                            <constraint firstItem="IRz-kW-6yy" firstAttribute="trailing" secondItem="3Hl-ZQ-iw0" secondAttribute="trailing" id="t72-ub-ibU"/>
+                            <constraint firstItem="DPi-T2-3aZ" firstAttribute="leading" secondItem="IRz-kW-6yy" secondAttribute="leading" constant="40" id="ucg-TL-n5f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IRz-kW-6yy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vXe-2Q-kNS"/>
+                    <connections>
+                        <outlet property="result_1" destination="feB-W1-Iir" id="J9H-fU-t9D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Rj-x3-7Pi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1464" y="165"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aSn-xE-PsE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XJa-Ht-4nt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dLS-2e-Ny5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UPi-Gf-lU0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jK5-AX-bf6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-813" y="156"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="截圖 2020-03-29 下午2.30.35" width="242" height="182"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rMw-th-7UZ"/>
+    </inferredMetricsTieBreakers>
 </document>
